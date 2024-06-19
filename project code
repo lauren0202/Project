@@ -1,0 +1,40 @@
+import numpy as np
+from scipy.integrate import solve_ivp
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Lorenz system parameters
+sigma = 10.0  # Prandtl number
+rho = 28.0    # Rayleigh number
+beta = 8.0 / 3.0  # Ratio of viscous force to thermal force
+
+# Define the Lorenz system
+def lorenz_system(t, y):
+    x, y, z = y
+    dx_dt = sigma * (y - x)
+    dy_dt = x * (rho - z) - y
+    dz_dt = x * y - beta * z
+    return [dx_dt, dy_dt, dz_dt]
+
+# Initial conditions
+initial_conditions = [1.0, 1.0, 1.0]
+
+# Time span for the simulation
+t_span = (0, 40)  # from t=0 to t=40
+t_eval = np.linspace(t_span[0], t_span[1], 10000)
+
+# Solve the differential equations
+solution = solve_ivp(lorenz_system, t_span, initial_conditions, t_eval=t_eval)
+
+# Extract solutions
+x, y, z = solution.y
+
+# Plotting
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.plot(x, y, z, lw=0.5)
+ax.set_xlabel("X Axis")
+ax.set_ylabel("Y Axis")
+ax.set_zlabel("Z Axis")
+ax.set_title("Lorenz Attractor")
+plt.show()
