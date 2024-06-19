@@ -1,7 +1,7 @@
 # Project
 #### Let's design and create a dynamic system simulator using the Van der Pol Oscillator as our model. This example provides an excellent case for studying nonlinear dynamics and understanding how ordinary differential equations (ODEs) describe physical systems.
 ### Motivation
-#### The Van der Pol Oscillator is a nonlinear system that exhibits different behaviors depending on its parameters, notably limit cycles and relaxation oscillations. It's a classic model used in various fields such as electrical engineering, biology, and physics. Understanding this system involves exploring stability, oscillations, and the impact of nonlinearity on systems, which are crucial concepts in applied mathematics and ODEs.
+#### In This semester, I take a course of O.D.E. Studying this subject, I had some difficulty to understand and imagine the problems. So, I feel the need this program. The Van der Pol Oscillator is a nonlinear system that exhibits different behaviors depending on its parameters, notably limit cycles and relaxation oscillations. It's a classic model used in various fields such as electrical engineering, biology, and physics. Understanding this system involves exploring stability, oscillations, and the impact of nonlinearity on systems, which are crucial concepts in applied mathematics and ODEs.
 ### How to Get the Data
 #### For a mathematical model like the Van der Pol Oscillator, "data" refers to the solutions of the differential equations under various initial conditions and parameters. We simulate these solutions using numerical methods because analytical solutions to such nonlinear equations are typically not available.
 ### Model
